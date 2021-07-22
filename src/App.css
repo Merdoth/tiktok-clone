@@ -2,11 +2,48 @@ html {
   scroll-snap-type: y mandatory;
 }
 
+.app {
+  height: 100vh;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #343536 20%, #000000 74%);
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.app > h2 {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  font-family: 'Fuggles', cursive;
+  letter-spacing: 1.95px;
+  font-size: 30px;
+}
 .app__videos {
   position: relative;
-  height: 800px;
+  height: 700px;
   overflow: scroll;
-  width: 80%;
-  max-width: 500px;
+  width: 70%;
+  max-width: 380px;
+  border-radius: 20px;
+  border: 4px solid #000;
   scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px, 
+  rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+}
+
+.app__videos::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 755px) {
+  .app > h2 {
+    font-size: 22px;
+    position: relative;
+    left: 0px;
+    top: 10px;
+  }
 }
